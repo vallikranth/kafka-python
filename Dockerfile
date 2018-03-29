@@ -18,7 +18,7 @@ RUN pip install pyOpenSSL ndg-httpsclient pyasn1
 RUN curl -Lk -o /tmp/0.9.1.tar.gz https://github.com/confluentinc/librdkafka/archive/0.9.1.tar.gz && \
     tar -xzf /tmp/0.9.1.tar.gz -C /tmp && \
     cd /tmp/librdkafka-0.9.1 && \
-    ./configure && make && make install && make clean && ./configure --clean
+    ./configure && make && make install && ldconfig
     
 RUN pip install confluent-kafka
 
